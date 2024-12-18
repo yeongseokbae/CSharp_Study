@@ -15,6 +15,30 @@ namespace Condition
         public Form1()
         {
             InitializeComponent();
+            button1.Click += new EventHandler(this.button1_Click);
+        }
+
+        private bool ThrowCoin(bool userGuess)
+        {
+            Random random = new Random();
+            int randomValue = random.Next(0, 2);
+            textBox1.Text += $"생성된 난수: {randomValue}\r\n";
+
+            return userGuess == (randomValue == 1);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+
+            bool userInput = true;
+
+            bool result = ThrowCoin(userInput);
+
+            if (result)
+                textBox1.Text += "결과: 승리!";
+            else
+                textBox1.Text += "결과: 패배!";
         }
     }
 }
