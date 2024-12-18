@@ -21,10 +21,11 @@ namespace Condition
         private bool ThrowCoin(bool userGuess)
         {
             Random random = new Random();
-            int randomValue = random.Next(0, 2);
-            textBox1.Text += $"생성된 난수: {randomValue}\r\n";
+            int randomValue = random.Next();
+            int result = randomValue % 2;
+            textBox1.Text += $"생성된 난수: {randomValue}, 연산 결과 : {result}\r\n";
 
-            return userGuess == (randomValue == 1);
+            return userGuess == (result == 1);
         }
 
         private void button1_Click(object sender, EventArgs e)
