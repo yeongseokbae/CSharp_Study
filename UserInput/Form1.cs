@@ -16,5 +16,10 @@ namespace UserInput
         {
             InitializeComponent();
         }
+
+        private void button_input_Click(object sender, EventArgs e)
+        {
+            textBox_result.Text = textBox_input.Text;
+        }
     }
 }
