@@ -15,7 +15,8 @@ namespace Condition
         public Form1()
         {
             InitializeComponent();
-            button1.Click += new EventHandler(this.button1_Click);
+            
+            // kkk
         }
 
         private bool ThrowCoin(bool userGuess)
@@ -35,6 +36,7 @@ namespace Condition
             bool userInput = true;
 
             bool result = ThrowCoin(userInput);
+            // bool userGuess = userInput;
 
             if (result)
                 textBox1.Text += "결과: 승리!";

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Condition
+﻿namespace Switch
 {
     partial class Form1
     {
@@ -30,27 +28,35 @@ namespace Condition
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_input = new System.Windows.Forms.TextBox();
+            this.textBox_result = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBox_input
             // 
-            this.textBox1.Location = new System.Drawing.Point(32, 124);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(710, 195);
-            this.textBox1.TabIndex = 0;
+            this.textBox_input.Location = new System.Drawing.Point(135, 46);
+            this.textBox_input.Name = "textBox_input";
+            this.textBox_input.Size = new System.Drawing.Size(365, 21);
+            this.textBox_input.TabIndex = 0;
+            // 
+            // textBox_result
+            // 
+            this.textBox_result.Location = new System.Drawing.Point(135, 93);
+            this.textBox_result.Multiline = true;
+            this.textBox_result.Name = "textBox_result";
+            this.textBox_result.Size = new System.Drawing.Size(365, 214);
+            this.textBox_result.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(654, 63);
+            this.button1.Location = new System.Drawing.Point(575, 44);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
+            this.button1.TabIndex = 2;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -58,7 +64,8 @@ namespace Condition
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_result);
+            this.Controls.Add(this.textBox_input);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -68,7 +75,8 @@ namespace Condition
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_input;
+        private System.Windows.Forms.TextBox textBox_result;
         private System.Windows.Forms.Button button1;
     }
 }
